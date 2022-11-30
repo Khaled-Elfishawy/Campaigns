@@ -44,7 +44,7 @@
                   <td>
                      <a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{{count($salesman->campaigns?$salesman->campaigns:[])}}</a>
                   </td>
-                  <td class="text-dark fw-bold text-hover-primary fs-6"></td>
+                  <td class="text-dark fw-bold text-hover-primary fs-6">{{\App\Models\Lead::where('sales',$salesman->id)->OrWhereIn('campaign',$salesman->campaigns?$salesman->campaigns:[])->count()}}</td>
 
                   <td class="text-end">
                      <a href="{{url('sales/campaigns/'.$salesman->id)}}" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
