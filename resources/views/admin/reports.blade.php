@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+Reports
+@endsection
 @section('main_old')
    <div class="flex-column flex-lg-row-auto w-100 w-lg-250px w-xxl-325px mb-8 mb-lg-0 me-lg-9 me-5">
       <!--begin::Form-->

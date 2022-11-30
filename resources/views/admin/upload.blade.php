@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+Upload
+@endsection
 @section('main')
 <div class="card card-flush pt-3 mb-5 mb-xl-10">
 	<!--begin::Card header-->

@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+Sales
+@endsection
 @section('main')
 <div class="card mb-5 mb-xl-8">
    <!--begin::Header-->
