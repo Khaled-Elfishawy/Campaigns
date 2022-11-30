@@ -1,0 +1,268 @@
+/**************************************************************
+fonts
+**************************************************************/
+@font-face {
+    font-family: 'Tajawal-Regular';
+    src: url('../fonts/Tajawal-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Tajawal-Regular.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('../fonts/Tajawal-Regular.woff2') format('woff2'),/* Super Modern Browsers */
+    url('../fonts/Tajawal-Regular.woff') format('woff'),/* Pretty Modern Browsers */
+    url('../fonts/Tajawal-Regular.ttf') format('truetype'),/* Safari, Android, iOS */
+    url('../fonts/Tajawal-Regular.svg#Tajawal-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Tajawal-Medium';
+    src: url('../fonts/Tajawal-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Tajawal-Medium.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('../fonts/Tajawal-Medium.woff2') format('woff2'),/* Super Modern Browsers */
+    url('../fonts/Tajawal-Medium.woff') format('woff'),/* Pretty Modern Browsers */
+    url('../fonts/Tajawal-Medium.ttf') format('truetype'),/* Safari, Android, iOS */
+    url('../fonts/Tajawal-Medium.svg#Tajawal-Medium') format('svg');
+}
+
+@font-face {
+    font-family: 'Tajawal-Bold';
+    src: url('../fonts/Tajawal-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Tajawal-Bold.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('../fonts/Tajawal-Bold.woff2') format('woff2'),/* Super Modern Browsers */
+    url('../fonts/Tajawal-Bold.woff') format('woff'),/* Pretty Modern Browsers */
+    url('../fonts/Tajawal-Bold.ttf') format('truetype'),/* Safari, Android, iOS */
+    url('../fonts/Tajawal-Bold.svg#Tajawal-Bold') format('svg');
+}
+
+@font-face {
+    font-family: 'Tajawal-Black';
+    src: url('../fonts/Tajawal-Black.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Tajawal-Black.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('../fonts/Tajawal-Black.woff2') format('woff2'),/* Super Modern Browsers */
+    url('../fonts/Tajawal-Black.woff') format('woff'),/* Pretty Modern Browsers */
+    url('../fonts/Tajawal-Black.ttf') format('truetype'),/* Safari, Android, iOS */
+    url('../fonts/Tajawal-Black.svg#Tajawal-Black') format('svg');
+}
+@font-face {
+    font-family: 'Cairo-Regular';
+    src: url('../fonts/Cairo-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Cairo-Regular.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('../fonts/Cairo-Regular.ttf') format('truetype'),/* Safari, Android, iOS */
+    url('../fonts/Cairo-Regular.svg#Cairo-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Cairo-SemiBold';
+    src: url('../fonts/Cairo-SemiBold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Cairo-SemiBold.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('../fonts/Cairo-SemiBold.ttf') format('truetype'),/* Safari, Android, iOS */
+    url('../fonts/Cairo-SemiBold.svg#Cairo-SemiBold') format('svg');
+}
+
+@font-face {
+    font-family: 'Cairo-Bold';
+    src: url('../fonts/Cairo-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Cairo-Bold.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('../fonts/Cairo-Bold.ttf') format('truetype'),/* Safari, Android, iOS */
+    url('../fonts/Cairo-Bold.svg#Cairo-Bold') format('svg');
+}
+
+@font-face {
+    font-family: 'Cairo-Black';
+    src: url('../fonts/Cairo-Black.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Cairo-Black.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('../fonts/Cairo-Black.woff2') format('woff2'),/* Super Modern Browsers */
+    url('../fonts/Cairo-Black.woff') format('woff'),/* Pretty Modern Browsers */
+    url('../fonts/Cairo-Black.ttf') format('truetype'),/* Safari, Android, iOS */
+    url('../fonts/Cairo-Black.svg#Cairo-Black') format('svg');
+}
+@font-face {
+    font-family: 'DroidKufi-R';
+    src: url('../fonts/DroidKufi-Regular.eot');
+    src: url('../fonts/DroidKufi-Regular.eot#iefix') format('embedded-opentype'),url('../fonts/DroidKufi-Regular.woff2') format('woff2'),url('../fonts/DroidKufi-Regular.woff') format('woff'),url('../fonts/DroidKufi-Regular.ttf') format('truetype'),url('../fonts/DroidKufi-Regular.svg#svgFontName') format('svg')
+}
+
+@font-face {
+    font-family: 'DroidKufi-B';
+    src: url('../fonts/DroidKufi-Bold.eot');
+    src: url('../fonts/DroidKufi-Bold.eot#iefix') format('embedded-opentype'),url('../fonts/DroidKufi-Bold.woff2') format('woff2'),url('../fonts/DroidKufi-Bold.woff') format('woff'),url('../fonts/DroidKufi-Bold.ttf') format('truetype'),url('../fonts/DroidKufi-Bold.svg#svgFontName') format('svg')
+}
+
+@font-face {
+    font-family: 'ASLEWeb';
+    src: url('../fonts/ASLEWeb.woff') format('woff');
+}
+/**************************************************************
+general page style
+**************************************************************/
+body.rtl {
+    font-family: "Tajawal-Regular", 'Lato-Regular';
+    direction: rtl;
+    text-align: right;
+}
+
+.btn, .btn:hover, .btn:focus {
+    font-family: 'Tajawal-Bold';
+}
+
+
+/**************************************************************
+footer style
+**************************************************************/
+footer .footer_logo {margin-left: inherit;margin-right: auto;}
+footer .footer_bottom_wrap .footer_social_network ul li:first-child {margin-left: 15px;margin-right:0;}
+footer .footer_bottom_wrap .footer_social_network ul li:last-child {margin-right: 15px;margin-left:0;}
+
+/* language */
+footer .language {margin-right: inherit;margin-left: 180px;}
+footer .language li.init:after {right: inherit;left: 26px;}
+footer .language li a {padding: 5px 33px 5px 10px;}
+
+footer .language li.init a.en_lang,
+footer .language li:not(.init) a.en_lang,
+
+footer .language li.init a.fr_lang,
+footer .language li:not(.init) a.fr_lang,
+
+footer .language li.init a.ar_lang,
+footer .language li:not(.init) a.ar_lang,
+
+footer .language li.init a.de_lang,
+footer .language li:not(.init) a.de_lang,
+
+footer .language li.init a.it_lang,
+footer .language li:not(.init) a.it_lang  {
+    padding-left: inherit;
+    padding-right: 35px;
+    background-position: right center;
+}
+/* /language */
+
+footer .footer_bottom_wrap .footer_copyright:before {margin-right: inherit;margin-left: 10px;}
+
+@media all and (max-width:991px){
+    footer .footer_logo {margin: 40px auto 20px;}
+    footer .footer_links li {border-right: none;border-left: 1px solid #929191;}
+    footer .footer_links li:last-child {border-right: inherit;border-left: none;padding-right:inherit;padding-left:0;}
+    footer .language {margin: 60px 0 30px;}
+}
+
+/**************************************************************
+form style
+**************************************************************/
+form p.invalid_message {direction: rtl;text-align: right;padding: 3px 3px 0 0}
+form label.form-control-placeholder {left: inherit;right: 0;}
+form input {text-align: right;}
+
+form input[name="PhoneNumber"]::-webkit-input-placeholder,
+form input[name="Email"]::-webkit-input-placeholder,
+form input[name="password"]::-webkit-input-placeholder { text-align: right; }
+
+form input[name="PhoneNumber"]:-moz-placeholder,
+form input[name="Email"]:-moz-placeholder,
+form input[name="password"]:-moz-placeholder { text-align: right; } /* FF 4-18 */
+
+form input[name="PhoneNumber"]::-moz-placeholder,
+form input[name="Email"]::-moz-placeholder,
+form input[name="password"]::-moz-placeholder { text-align: right; } /* FF 19+ */
+
+form input[name="PhoneNumber"]:-ms-input-placeholder,
+form input[name="Email"]:-ms-input-placeholder,
+form input[name="password"]:-ms-input-placeholder { text-align: right; } /* IE 10+ */
+
+form input[name="PhoneNumber"],
+form input[name="PhoneCountryCode"],
+form input[name="Email"] {
+    text-align: left;
+    direction: ltr;
+}
+
+form .password_invalid_message h5,
+form .password_invalid_message p {
+    text-align: right;
+}
+
+form .password_invalid_message p {padding: 7px 25px 7px 0;}
+form .password_invalid_message p.valid:before {left:inherit;right: 1px;}
+form .checkbox_wrapper{text-align: right;}
+
+form .checkbox_wrapper .checkbox,
+form .checkbox_wrapper .checkbox_txt {
+    float:right;
+}
+
+form .checkbox_wrapper .checkbox {margin: 1px 0 0 10px;}
+form .checkbox_wrapper .checkbox label {left:inherit;right:0;}
+form .checkbox_wrapper .checkbox.unchecked:before {left:inherit;right: -10px;border-left: transparent;border-right: 8px solid #ff0e36;-moz-animation: checkbox_arrow_bounce_right 3s infinite;-webkit-animation: checkbox_arrow_bounce_right 3s infinite;animation: checkbox_arrow_bounce_right 3s infinite;}
+
+@-moz-keyframes checkbox_arrow_bounce_right {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+    40% {
+        -moz-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    60% {
+        -moz-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+}
+@-webkit-keyframes checkbox_arrow_bounce_right {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    40% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    60% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+}
+@keyframes checkbox_arrow_bounce_right {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    40% {
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    60% {
+        -moz-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+}
+
+form input[name="FirstName"],
+form input[name="Email"],
+form input[name="password"] {
+    background-position: right center;
+}
+
+form input[name="password"] {padding-left: 1.9rem;}
+form .phone-container {padding: 0;background: transparent;}
+form .phone-container input[name="PhoneNumber"] {background: url(../fonts/phone_icon.svg) no-repeat right center;}
+
+.form_wrapper.dark_form form label.form-control-placeholder,
+.form_wrapper.light_form form label.form-control-placeholder {
+    right: 15px;
+    left:inherit;
+}
+
+.form_wrapper.dark_form form input.form-control,
+.form_wrapper.light_form form input.form-control {
+    padding: .375rem 1rem .375rem .75rem;
+}
+
+.form_wrapper.dark_form form p.invalid_message,
+.form_wrapper.light_form form p.invalid_message {
+    text-align: right;
+}

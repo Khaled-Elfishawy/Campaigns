@@ -1,0 +1,35 @@
+﻿$(document).ready(function () {
+    getCountryByIp();
+});
+
+function getDialingCode() {
+    $('#PhoneCountryCode').val('');
+    $.ajax({
+        type: "POST",
+        url: '/Tools/GetDialingCode',
+        dataType: "json",
+        data: '&country=' + $('#Country').val(),
+        async: false,
+        success: function (response) {
+            if ($('#Country').val() != '' && response != '' && response != null) {
+                $('#PhoneCountryCode').val(response);
+            }
+        }
+    });
+}
+
+function getCountryByIp() {
+    $.ajax({
+        type: "POST",
+        url: '/Tools/GetCountryByIp',
+        dataType: "json",
+        async: false,
+        success: function (response) {
+            if (response != '') {
+                $('#Country').val(response);
+                getDialingCode();
+            }
+        }
+    });
+}
+

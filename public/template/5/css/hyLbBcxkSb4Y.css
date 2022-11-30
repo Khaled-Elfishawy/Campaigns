@@ -1,0 +1,80 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: -9999;
+  background-color: rgba(0,0,0,.5);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+}
+
+.modal.active {
+bottom: 0;
+z-index: 9999;
+opacity: 1;
+}
+
+.modal .modal-body {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 400px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.modal .modal-body .modal-close {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  top: -13px;
+  right: -13px;
+  background-color: #ccc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.modal .modal-body .modal-close:hover,
+.modal .modal-body .modal-close:focus {
+background-color: #bbb;
+}
+
+.modal .modal-body h3 {
+margin-top: 0;
+margin-bottom: 20px;
+font-size: 1.5em;
+}
+
+.btn-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  color: #fff !important;
+  background-color: #f7941d;
+  z-index: 99;
+  transition: all .3s ease;
+  text-decoration: none;
+  font-size: 20px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.btn-fixed:hover,
+.btn-fixed:hover {
+    background-color: #d88119;
+}
+
+body {
+  padding-bottom: 60px;
+}

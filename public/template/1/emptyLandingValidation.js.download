@@ -1,0 +1,47 @@
+﻿function submitLandingActionForm() {
+	
+    if (!isValid()) {
+        $("#Error").show();
+    }
+    else {$('#actionForm').submit()}
+}
+function isValid() {
+    var isValid = true;
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+    if ($('#FirstName').val() == '') {
+        isValid = false;
+        $('#FirstName').addClass('input-validation-error');
+    }
+    if ($('#LastName').val() == '') {
+        isValid = false;
+        $('#LastName').addClass('input-validation-error');
+    }
+	if (!emailReg.test($('#Email').val())) {
+	    isValid = false;
+	    $('#Email').addClass('input-validation-error');
+    }
+    if ($('#Email').val() == '') {
+        isValid = false;
+        $('#Email').addClass('input-validation-error');
+    }
+    if ($('#PhoneNumber').val() == '') {
+        isValid = false;
+        $('#PhoneNumber').addClass('input-validation-error');
+    }
+    if(!document.getElementById('IsTermsAccepted').checked){
+        $('#IsTermsAccepted').parent().parent().parent().addClass('input-validation-error');
+        isValid = false;
+    }
+    return isValid;
+}
+
+$(document).ready(function () {
+    $("#PhoneNumber").numeric();
+    $('input[type=text]').change(function () {
+        $(this).removeClass('input-validation-error');
+    });
+     $('#IsTermsAccepted').change(function() {
+        $('#IsTermsAccepted').parent().parent().parent().removeClass('input-validation-error');    
+    })
+});

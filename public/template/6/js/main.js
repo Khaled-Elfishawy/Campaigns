@@ -1,0 +1,1 @@
+$(document).ready((function(){var s=$(".hide_top");$(window).scroll((function(){200<$(this).scrollTop()&&s.hasClass("default")?s.fadeOut("fast",(function(){$(this).removeClass("default").addClass("fixed").fadeIn("fast")})):$(this).scrollTop()<=200&&s.hasClass("fixed")&&s.fadeOut("fast",(function(){$(this).removeClass("fixed").addClass("default").fadeIn("fast")}))}))}));

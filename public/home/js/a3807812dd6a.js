@@ -1,0 +1,1 @@
+!function(e,a,n,t,c,g,s){e.GoogleAnalyticsObject=c,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement(n),s=a.getElementsByTagName(n)[0],g.async=1,g.src="//www.google-analytics.com/analytics.js",s.parentNode.insertBefore(g,s)}(window,document,"script",0,"ga"),ga("create","UA-42870837-1","my.nsfxaffiliates.com"),ga("send","pageview");

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <title>404 page</title>    
+     
+    </head>
+
+    <body>
+        <script>
+            window.location.href = "/index.php";
+        </script>
+
+    </body>
+
+</html>
