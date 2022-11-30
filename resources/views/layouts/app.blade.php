@@ -225,8 +225,8 @@ body{
                 <!--begin::Logo-->
                 <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
                     <!--begin::Logo image-->
-                    <a href="?page=index">
-                        <img alt="Logo" src="{{url('/')}}/assets/media/logos/logo.png" class="h-25px app-sidebar-logo-default theme-light-show" />
+                    <a href="{{url('/')}}" style="margin: 0 auto;">
+                        <img alt="Logo" src="{{url('/')}}/assets/media/logos/logo.png" class="h-25px app-sidebar-logo-default theme-light-show" style="height: 67px !important;" />
                         <img alt="Logo" src="{{url('/')}}/assets/media/logos/logo.png" class="h-25px app-sidebar-logo-default theme-dark-show" />
                         <img alt="Logo" src="{{url('/')}}/assets/media/logos/logo.png" class="h-20px app-sidebar-logo-minimize" />
                     </a>
