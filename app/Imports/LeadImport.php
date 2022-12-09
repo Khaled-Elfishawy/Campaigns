@@ -18,20 +18,22 @@ class LeadImport implements ToModel
     */
     public function model(array $row)
     {
-        return new Lead([
-            'name'              => $row[0] ,
-            'phone'             => $row[1] ,
-            'email'             => $row[2] ,
-            'address'           => $row[3] ,
-            'country'           => $row[4] ,
-            'city'              => $row[5] ,
-            'phone2'            => $row[6] ,
-            'deposit'           => $row[8],
-            'date_of_birth'     => $row[7],
-            'sales'             => null ,
-            'campaign'          => 1 ,
-            'status'            => 'new',
-            'source_campain'    => 'old',
-        ]);
+        if (!is_null($row[0])) {
+            return new Lead([
+                'name'              => $row[0].' '.$row[1] ,
+                'phone'             => $row[4] ,
+                'email'             => $row[2] ,
+                'address'           => null ,
+                'country'           => $row[3] ,
+                'city'              => null ,
+                'phone2'            => null ,
+                'deposit'           => null,
+                'date_of_birth'     => null,
+                'sales'             => null ,
+                'campaign'          => (\App\Models\Campaign::where('name',$row[5])->count() != 0)?\App\Models\Campaign::where('name',$row[5])->first()->id : 1 ,
+                'status'            => 'new',
+                'source_campain'    => 'old',
+            ]);
+        }
     }
 }

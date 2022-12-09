@@ -25,6 +25,7 @@
         <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
         <link href="{{url('/')}}/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
         <link href="{{url('/')}}/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link ref="stylesheet" type="text/css" href="{{url('/')}}/assets/dist/snackbar.min.css" /> 
         <!--end::Global Stylesheets Bundle-->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
@@ -574,6 +575,12 @@ body{
         <script src="{{url('/')}}/assets/js/custom/apps/chat/chat.js"></script>
         <script src="{{url('/')}}/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
         <script src="{{url('/')}}/assets/js/custom/utilities/modals/users-search.js"></script>
+        <script src="{{url('/')}}/assets/dist/snackbar.min.js"></script>
+        <script type="text/javascript">
+            $('select[name="sales"]').change(function() {
+                Snackbar.show({text: 'Example notification text.'});
+            });
+        </script>
         <!--end::Custom Javascript-->
         @yield('script')       
         <!--end::Javascript-->
