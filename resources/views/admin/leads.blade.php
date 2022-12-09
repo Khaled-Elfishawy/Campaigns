@@ -136,7 +136,7 @@ Leads
                      {{$lead->status}}
                   </td>
                   <td>
-                     <select name="sales" id="SelectSales" class="form-select">
+                     <select name="sales" data-sales="{{$lead->id}}" id="SelectSales" class="form-select">
                         @foreach(\App\Models\User::where('type','sales')->get() as $sales)
                            <option @if($sales->id == $lead->sales) selected @endif value="{{$sales->id}}">{{$sales->name}}</option>
                         @endforeach
@@ -177,4 +177,20 @@ Leads
    </div>
    <!--begin::Body-->
 </div>
+   <div class="pagination">
+      {{$leads->links()}}
+   </div>
+@endsection
+@section('script')
+<script type="text/javascript">
+   $('select[name="sales"]').change(function() {
+      $.ajax({
+        method: "POST",
+        url: "{{url('assign')}}",
+        data: { name: "John", location: "Boston" }
+      }).done(function( msg ) {
+         alert( "Data Saved: " + msg );
+      });      
+   });
+</script>
 @endsection

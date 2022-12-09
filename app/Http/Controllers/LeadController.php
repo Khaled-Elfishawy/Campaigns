@@ -25,7 +25,7 @@ class LeadController extends Controller
                 }else{
                     $e->where('status','new');
                 }               
-            })->paginate(100);
+            })->paginate(20);
         else
             $leads = Lead::where(function($e)use($type){
                 $e->where(function($s){

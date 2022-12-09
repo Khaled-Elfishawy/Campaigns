@@ -23,6 +23,7 @@ Route::POST('/lead/create' ,[LeadController::class, 'store'])->name('create_lead
 Route::group(['middleware' => 'auth'], function()
 {
 	Route::get('/', function () { return view('dashboard');} )->name('dashboard');
+	Route::get('/dashboard', function () { return view('dashboard');} )->name('dashboard');
 	Route::get('/campaigns' ,[CampaignsController::class, 'index'])->name('campaigns');
 	Route::get('/campaigns/create' ,[CampaignsController::class, 'create'])->name('create_campaigns');
 	Route::POST('/campaigns/create' ,[CampaignsController::class, 'store'])->name('store_campaigns');
