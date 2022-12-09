@@ -576,11 +576,7 @@ body{
         <script src="{{url('/')}}/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
         <script src="{{url('/')}}/assets/js/custom/utilities/modals/users-search.js"></script>
         <script src="{{url('/')}}/assets/dist/snackbar.min.js"></script>
-        <script type="text/javascript">
-            $('select[name="sales"]').change(function() {
-                Snackbar.show({text: 'Example notification text.'});
-            });
-        </script>
+
         <!--end::Custom Javascript-->
         @yield('script')       
         <!--end::Javascript-->

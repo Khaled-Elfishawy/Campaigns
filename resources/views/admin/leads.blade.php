@@ -133,14 +133,14 @@ Leads
                      <a href="{{url('lead/'.$lead->id)}}" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{{App\Models\Campaign::find($lead->campaign)->name}}</a>
                   </td>
                   <td class="text-dark fw-bold text-hover-primary fs-6">
+                     {{$lead->status}}
+                  </td>
+                  <td>
                      <select name="sales" id="SelectSales" class="form-select">
                         @foreach(\App\Models\User::where('type','sales')->get() as $sales)
                            <option @if($sales->id == $lead->sales) selected @endif value="{{$sales->id}}">{{$sales->name}}</option>
                         @endforeach
                      </select>
-                  </td>
-                  <td>
-                     <span class="badge badge-light-success">no</span>
                   </td>
                   <td class="text-end">
                      <a href="{{url('lead/'.$lead->id)}}" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
