@@ -39,7 +39,14 @@ Sales
                @foreach($sales as $salesman)
                <tr>
                   <td>
-                     <a href="#" class="text-dark fw-bold text-hover-primary fs-6">{{$salesman->name}}</a>
+                     <a href="#" class="text-dark fw-bold text-hover-primary fs-6">
+                        @if(Cache::has('user-is-online-' . $salesman->id))
+                           <span class="badge badge-light-success">Online</span>
+                        @else
+                           <span class="badge badge-light-danger">Offline</span>
+                        @endif
+                        {{$salesman->name}}
+                     </a>
                   </td>
                   <td>
                      <a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{{$salesman->email}}</a>

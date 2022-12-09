@@ -104,7 +104,9 @@ Leads
                   <th class="min-w-120px">Email</th>
                   <th class="min-w-120px">Campagin</th>
                   <th class="min-w-120px">Status</th>
+                  @if(auth()->user()->type != 'sales')
                   <th class="min-w-120px">Sales</th>
+                  @endif
                   <th class="min-w-100px text-end">Actions</th>
                </tr>
             </thead>
@@ -135,6 +137,7 @@ Leads
                   <td class="text-dark fw-bold text-hover-primary fs-6">
                      {{$lead->status}}
                   </td>
+                  @if(auth()->user()->type != 'sales')
                   <td>
                      <select name="sales" data-sales="{{$lead->id}}" id="SelectSales" class="form-select">
                         @foreach(\App\Models\User::where('type','sales')->get() as $sales)
@@ -142,6 +145,7 @@ Leads
                         @endforeach
                      </select>
                   </td>
+                  @endif
                   <td class="text-end">
                      <a href="{{url('lead/'.$lead->id)}}" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
                         <!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->

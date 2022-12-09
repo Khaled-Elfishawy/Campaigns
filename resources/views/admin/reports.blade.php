@@ -3,6 +3,11 @@
 Reports
 @endsection
 @section('main_old')
+ 
+@endsection
+@section('main')
+
+<div class="d-flex flex-column flex-lg-row">
    <div class="flex-column flex-lg-row-auto w-100 w-lg-250px w-xxl-325px mb-8 mb-lg-0 me-lg-9 me-5">
       <!--begin::Form-->
       <form action="#" method="post">
@@ -80,13 +85,10 @@ Reports
          <!--end::Card-->
       </form>
       <!--end::Form-->
-   </div>   
-@endsection
-@section('main')
-<div class="d-flex flex-column flex-lg-row">
+   </div>     
    <div class="flex-lg-row-fluid">
       
-      <div class="card mb-5 mb-xl-12">
+      <div class="card mb-5 mb-xl-8">
          <!--begin::Header-->
          <div class="card-header border-0 pt-5">
             <h3 class="card-title align-items-start flex-column">

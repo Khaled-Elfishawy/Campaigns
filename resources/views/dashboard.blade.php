@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Dashboard
+Riverx Network
 @endsection
 @if(auth()->user()->type != 'sales')
 @section('main')
