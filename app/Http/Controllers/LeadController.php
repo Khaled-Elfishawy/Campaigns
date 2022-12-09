@@ -82,6 +82,14 @@ class LeadController extends Controller
         return redirect()->route('uploaded_lead');
     }
 
+    public function assign(Request $request)
+    {
+        $lead = Lead::find($request->lead);
+        $lead->sales = $request->sales;
+        $lead->save();
+        return response(200);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

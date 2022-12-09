@@ -183,13 +183,13 @@ Leads
 @endsection
 @section('script')
 <script type="text/javascript">
-   $('select[name="sales"]').change(function() {
+   $('select[name="sales"]').change(function(el) {
       $.ajax({
-        method: "POST",
+        method: "GET",
         url: "{{url('assign')}}",
-        data: { name: "John", location: "Boston" }
+        data: { lead: $(this).attr('data-sales'), sales: $(this).val() }
       }).done(function( msg ) {
-         alert( "Data Saved: " + msg );
+         alert( "Data Saved");
       });      
    });
 </script>

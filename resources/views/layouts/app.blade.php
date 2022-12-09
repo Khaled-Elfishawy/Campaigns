@@ -4,6 +4,8 @@
     <head>
         <base href="" />
         <title>@yield('title', env('APP_NAME'))</title>
+        
+        <link ref="stylesheet" type="text/css" href="{{url('/')}}/assets/dist/snackbar.min.css" /> 
         <meta charset="utf-8" />
         <meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Flask & Laravel versions. Grab your copy now and get life-time updates for free." />
         <meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Flask & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -25,7 +27,6 @@
         <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
         <link href="{{url('/')}}/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
         <link href="{{url('/')}}/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-        <link ref="stylesheet" type="text/css" href="{{url('/')}}/assets/dist/snackbar.min.css" /> 
         <!--end::Global Stylesheets Bundle-->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
@@ -576,7 +577,6 @@ body{
         <script src="{{url('/')}}/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
         <script src="{{url('/')}}/assets/js/custom/utilities/modals/users-search.js"></script>
         <script src="{{url('/')}}/assets/dist/snackbar.min.js"></script>
-
         <!--end::Custom Javascript-->
         @yield('script')       
         <!--end::Javascript-->
