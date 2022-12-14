@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Lead;
 use App\Models\Comment;
+use App\Models\Action;
 use Illuminate\Http\Request;
 use App\Imports\LeadImport;
 use App\Exports\LeadExport;
@@ -29,7 +30,7 @@ class LeadController extends Controller
         else
             $leads = Lead::where(function($e)use($type){
                 $e->where(function($s){
-                    $s->where('sales',auth()->user()->id)->OrWhereIn('campaign',auth()->user()->campaigns);
+                    $s->where('sales',auth()->user()->id)->OrWhereIn('campaign',(auth()->user()->campaigns)?auth()->user()->campaigns:[]);
                 });
                 if(!is_null($type)){
                     $e->where('status',$type);
@@ -149,7 +150,7 @@ class LeadController extends Controller
         }else{
             $lead = Lead::where(function($e){
                 $e->where(function($s){
-                    $s->where('sales',auth()->user()->id)->OrWhereIn('campaign',auth()->user()->campaigns);
+                    $s->where('sales',auth()->user()->id)->OrWhereIn('campaign',(auth()->user()->campaigns)?auth()->user()->campaigns:[]);
                 });
                 $e->whereNotIn('status',['FTD','rejected']);
             })->where('id',$lead)->get();
@@ -183,7 +184,12 @@ class LeadController extends Controller
         $lead->sales            = $request->sales;
         $lead->status           = $request->status;
         $lead->save();
-        return back();
+        $action = new Action;
+        $action->lead_id = $lead->id;
+        $action->user_id = auth()->user()->id;
+        $action->action  = $request->status;
+        $action->save();
+        return redirect()->route('lead');
     }
 
     /**

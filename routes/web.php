@@ -46,6 +46,8 @@ Route::group(['middleware' => 'auth'], function()
 	Route::POST('/sales/campaigns/{sales}' ,[SalesController::class, 'update_campaigns'])->name('update_sales_campaigns');
 	Route::GET('/report' ,[ReportController::class, 'index'])->name('report');
 	Route::POST('/report' ,[ReportController::class, 'search'])->name('search_report');
+	Route::GET('/sales_report' ,[ReportController::class, 'sales_report'])->name('sales_report');
+	Route::POST('/sales_report' ,[ReportController::class, 'sales_report_search'])->name('sales_report_search');
 	//Uploaded Leads
 	Route::GET('/uploaded_lead/type/{type?}' ,[UploadedLeadsConreoller::class, 'index'])->name('uploaded_lead');
 	Route::POST('/uploaded_lead/type' ,[UploadedLeadsConreoller::class, 'search'])->name('search_uploaded_lead');

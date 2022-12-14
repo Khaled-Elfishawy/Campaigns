@@ -18,7 +18,7 @@ class SalesController extends Controller
      */
     public function index()
     {
-        $sales = User::where('type','sales')->get();
+        $sales = User::whereNot('id',1)->get();
         return view('admin.sales',compact('sales'));
     }
 
@@ -49,7 +49,10 @@ class SalesController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'type' => 'sales',
+            'country' => $request->country,
+            'phone' => $request->phone,
+            'office' => $request->office,
+            'type' => $request->type,
             'password' => Hash::make($request->password),
         ]);
         return redirect()->route('sales');

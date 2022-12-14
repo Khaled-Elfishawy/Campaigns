@@ -97,7 +97,9 @@ Leads
          <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
             <!--begin::Table head-->
             <thead>
+                  @if(auth()->user()->type != 'sales')
                   <th class="min-w-150px">#</th>
+                  @endif
                   <th class="min-w-150px">ID</th>
                   <th class="min-w-150px">Name</th>
                   <th class="min-w-140px">Phone</th>
@@ -116,9 +118,11 @@ Leads
             <tbody>
                @foreach($leads as $lead)
                <tr>
+ @if(auth()->user()->type != 'sales')                  
                   <td>
                      <input type="checkbox" name="ids[]" >
                   </td>
+@endif                  
                   <td>
                      <a href="{{url('lead/'.$lead->id)}}" class="text-dark fw-bold text-hover-primary fs-6">{{$lead->id}}</a>
                   </td>
@@ -181,9 +185,11 @@ Leads
    </div>
    <!--begin::Body-->
 </div>
+ @if(auth()->user()->type != 'sales')
    <div class="pagination">
       {{$leads->links()}}
    </div>
+@endif
 @endsection
 @section('script')
 <script type="text/javascript">

@@ -28,6 +28,7 @@ Sales
             <thead>
                   <th class="min-w-150px">Name</th>
                   <th class="min-w-120px">Email</th>
+                  <th class="min-w-120px">Role</th>
                   <th class="min-w-120px">Campagin</th>
                   <th class="min-w-120px">Clients</th>
                   <th class="min-w-100px text-end">Actions</th>
@@ -50,6 +51,13 @@ Sales
                   </td>
                   <td>
                      <a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{{$salesman->email}}</a>
+                  </td>
+                  <td>
+                     @if($salesman->type == 'admin')
+                        <span class="badge badge-light-success">Admin</span>
+                     @else
+                        <span class="badge badge-light-danger">Sales</span>
+                     @endif                     
                   </td>
                   <td>
                      <a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{{count($salesman->campaigns?$salesman->campaigns:[])}}</a>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Lead;
+use App\Models\Action;
 use App\Models\Campaign;
 
 class ReportController extends Controller
@@ -18,6 +20,19 @@ class ReportController extends Controller
 
         $campaigns = Campaign::all();  
         return view('admin.reports',compact('campaigns'));
+    }
+    public function sales_report()
+    {
+
+        $sales = User::whereNot('id',1)->get();  
+        $leads = Action::whereDate('created_at', \Carbon\Carbon::today())->get();
+        return view('admin.sales_reports',compact('sales','leads'));
+    }
+    public function sales_report_search(Request $request)
+    {
+        $sales = User::whereNot('id',1)->get();  
+        $leads = Action::whereBetween('created_at',[$request->from,$request->to])->get();
+        return view('admin.sales_reports',compact('sales','leads'));
     }
     public function search(Request $request)
     {
