@@ -116,7 +116,7 @@ Campaigns
 @section('script')
 <script type="text/javascript">
    $('.Copy').click(function(){
-      var Url = $(this).parent().children('.linkCamp').val();
+      var Url = $(this).parent().children('.linkCamp');
       Url.select();
       document.execCommand("copy");
    }); 
