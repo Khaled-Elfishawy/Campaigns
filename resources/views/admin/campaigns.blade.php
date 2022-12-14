@@ -61,7 +61,7 @@ Campaigns
                                              </div>
                                           </td>
                                           <td>
-                                             @if($campaign->expires_at < date('Y-m-d'))
+                                             @if($campaign->expires_at > date('Y-m-d'))
                                                 <span class="badge badge-light-success">Live Now</span>
                                              @else
                                                 <span class="badge badge-light-danger">Expired</span>
