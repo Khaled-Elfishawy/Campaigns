@@ -53,7 +53,7 @@ Campaigns
                                                 <a href="{{url('/campaign/'.base64_encode($campaign->id).'?utm-campaign='.md5($campaign->name).'&expires_at='.md5($campaign->expires_at))}}" class="mb-1 text-dark text-hover-primary fw-bold">
                                                    {{$campaign->name}}
                                                 </a>
-                                                <div class="fs-7 text-muted fw-bold">{{$campaign->created_at}}</div>
+                                                <div class="fs-7 text-muted fw-bold LinkCopy" data-url="{{url('/campaign/'.base64_encode($campaign->id).'?utm-campaign='.md5($campaign->name).'&expires_at='.md5($campaign->expires_at))}}" >Copy Link</div>
                                              </div>
                                           </td>
                                           <td>
@@ -108,4 +108,13 @@ Campaigns
             </div>
             <!--end::Row-->
 
+@endsection
+@section('script')
+<script type="text/javascript">
+   $('.LinkCopy').click(function(){
+      var Url = $(this).attr('data-url');
+      Url.select();
+      document.execCommand("copy");
+   }); 
+</script>
 @endsection

@@ -62,7 +62,7 @@ class CampaignsController extends Controller
     {
         $campaign = Campaign::find(base64_decode($campaign));
         if ($campaign->expires_at < date('Y-m-d')) {
-            return abort(404);;
+            return abort(404);
         }
         $campaign->increment('visits', 1);
         return view('templates.'.$campaign->template,compact('campaign'));
