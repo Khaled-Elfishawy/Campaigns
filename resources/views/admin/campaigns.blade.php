@@ -53,8 +53,11 @@ Campaigns
                                                 <a href="{{url('/campaign/'.base64_encode($campaign->id).'?utm-campaign='.md5($campaign->name).'&expires_at='.md5($campaign->expires_at))}}" class="mb-1 text-dark text-hover-primary fw-bold">
                                                    {{$campaign->name}}
                                                 </a>
-                                                <input type="text" name="linkCamp" disabled class="form-control linkCamp" value="{{url('/campaign/'.base64_encode($campaign->id).'?utm-campaign='.md5($campaign->name).'&expires_at='.md5($campaign->expires_at))}}">
-                                                <div class="fs-7 text-muted fw-bold LinkCopy" data-url="" >Copy Link</div>
+                                                
+                                                <div class="fs-7 text-muted fw-bold LinkCopy" data-url="" >
+                                                   <input type="text" name="linkCamp" disabled class="form-control linkCamp" value="{{url('/campaign/'.base64_encode($campaign->id).'?utm-campaign='.md5($campaign->name).'&expires_at='.md5($campaign->expires_at))}}">
+                                                   <span class="Copy">Copy Link</span>
+                                                </div>
                                              </div>
                                           </td>
                                           <td>
@@ -112,8 +115,8 @@ Campaigns
 @endsection
 @section('script')
 <script type="text/javascript">
-   $('.LinkCopy').click(function(){
-      var Url = $(this).children('.linkCamp').val();
+   $('.Copy').click(function(){
+      var Url = $(this).parent().children('.linkCamp').val();
       Url.select();
       document.execCommand("copy");
    }); 
